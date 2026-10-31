@@ -1,12 +1,12 @@
-pipeline 
-{
-agent any{
-stages{
+pipeline {
+    agent any
 
-stage(checkout)
-{
-git branch: 'main', url: 'https://github.com/sarangi99/Anuj-repo.git'
-}
-}
-}
+    stages {
+        stage('checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/sarangi99/Anuj-repo.git'
+
+            }
+        }
+    }
 }
